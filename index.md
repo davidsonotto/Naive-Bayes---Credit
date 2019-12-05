@@ -4,8 +4,8 @@ Nesse projeto será demonstrado a construção de um algoritmo de análise predi
 
 Abaixo as ferramentas e dados utilizados para esse projeto:
 
- - [Rstudio] (https://rstudio.cloud/)
- - [Credit-G] (https://www.openml.org/d/31)
+ - [Rstudio](https://rstudio.cloud/)
+ - [Credit-G](https://www.openml.org/d/31)
 
 ### Modelo Bayesiano
 
@@ -17,7 +17,6 @@ Existem diversos algoritmos e bibliotecas que utilizam a IA para modelos prediti
 Para desenvolver essa aplicação será necessário fazer a instalação de alguns pacotes, abaixo segue o script com as instalações dos mesmos.
 
 ```markdown
-Syntax highlighted code block
 install.packages("caTools")
 install.packages("e1071")
 install.packages("caret")
@@ -41,8 +40,8 @@ base_treinamento = subset(dados1,divisao==TRUE)
 base_teste = subset(dados1,divisao==FALSE)
 ```
 
-### Modelo
 
+### Modelo
 
 Finalizando a divisão, iniciamos a construção do modelo classificatório, chamamos a função <i>naiveBayes()</i>, essa função pertence a biblioteca <i>e1071</i> e ela com base em calculos bayesianos retorna a relevância com base na probabilidade de cada variavel para a classificação.
 
@@ -54,6 +53,7 @@ classificador = naiveBayes(x = base_treinamento[,-21], y = base_treinamento$clas
 
 Veja que são passados dois parametros para a função, x e y, isso nos remete a um plano cartesiano, onde o x recebe a base de treinamento sem a classificação que a fonte possui, que no caso se encontra na coluna 21, e no y informamos a base de treinamento com a classificação.
 
+
 ### Previsão
 
 Com o modelo pronto usaremos agora o método <i>predict</i> para inferir o modelo criado e treinado sobre a base de teste. Para isso, retiramos a classificação que a base de teste possui e passamos como parametro o modelo criado.
@@ -61,6 +61,7 @@ Com o modelo pronto usaremos agora o método <i>predict</i> para inferir o model
 ```markdown
 previsao = predict(classificador,newdata = base_teste[,-21])
 ```
+
 
 ### Validação
 
@@ -71,7 +72,26 @@ matriz = table(base_teste$class,previsao)
 confusionMatrix(matriz)
 ```
 
+E temos o resultado abaixo
 
-### Support or Contact
+```markdown
+Confusion Matrix and Statistics
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+      previsao
+       bad good
+  bad   72   18
+  good  29  181
+                                          
+               Accuracy : 0.8112          
+                 [...]
+```
+
+
+### Conclusão
+
+Como podemos ver a acurácia final foi de 81%, portanto que numa implementação desse modelo a taxa de acerto com outros dados será próxima de 81%.
+
+
+### Conclusão
+
+Existem diversas formas de aperfeiçoar esse modelo e gerar uma acurácia maior, porém nesse projeto o interessante é entender o funcionameno do modelo bayesiano em uma análise preditiva e com isso saber em quais situações ele é se vira melhor.
