@@ -1,12 +1,15 @@
-## Welcome to GitHub Pages
+## Bem vindo!
 
-You can use the [editor on GitHub](https://github.com/davidsonotto/Naive-Bayes---Credit/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Nesse projeto será demonstrado a construção de um algoritmo de análise preditiva, baseado no modelo estatístico Bayesiano, com o objetivo de identificar inadimplentes dentro de uma base de crédito ficctícia.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Abaixo as ferramentas e dados utilizados para esse projeto:
 
-### Markdown
+ - Rstudio (https://rstudio.cloud/)
+ - Credit-G (https://www.openml.org/d/31)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Modelo Bayesiano
+
+Existem diversos algoritmos e bibliotecas que utilizam a IA para modelos preditivos classificatórios, para este projeto será utilizado o algoritmo Naive Bayes, que é um modelo de classificação probalístico, ou seja, ela irá descartar a correlação entre as <i>features</i>, tratando cada uma de maneira independente e desta forma irá mensurar a probabilidade de cada varíavel de cada <i>feature</i> para as possíveis classificações.
 
 ```markdown
 Syntax highlighted code block
