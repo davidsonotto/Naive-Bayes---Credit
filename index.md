@@ -86,12 +86,6 @@ Confusion Matrix and Statistics
                  [...]
 ```
 
-
 ### Conclusão
 
-Como podemos ver a acurácia final foi de 81%, portanto que numa implementação desse modelo a taxa de acerto com outros dados será próxima de 81%.
-
-
-### Conclusão
-
-Existem diversas formas de aperfeiçoar esse modelo e gerar uma acurácia maior, porém nesse projeto o interessante é entender o funcionameno do modelo bayesiano em uma análise preditiva e com isso saber em quais situações ele é se vira melhor.
+Existem diversas formas de aperfeiçoar esse modelo e gerar uma acurácia maior, porém nesse projeto o interessante é entender o funcionameno do modelo bayesiano em uma análise preditiva e com isso saber em quais situações ele é melhor.
